@@ -1,0 +1,24 @@
+{
+  "name": "jstdd",
+  "version": "1.0.0",
+  "description": "Curso de jstdd\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[CBiblioteca do curso de jstdd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jean-Pierre-97s/CursoJsTdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Jean Pierre <jean_pierre@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jean-Pierre-97s/CursoJsTdd/issues"
+  },
+  "homepage": "https://github.com/Jean-Pierre-97s/CursoJsTdd#readme"
+}
