@@ -4,32 +4,50 @@
   "description": "Curso de jstdd\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[CBiblioteca do curso de jstdd",
   "main": "index.js",
   "scripts": {
+    "clear": "rimraf lib",
+    "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
+    "build:watch": "npm run build -- --watch",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "pre-push": "npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepush": "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --watch",
+    "test:coverage": "nyc npm test"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jean-Pierre-97s/CursoJsTdd.git"
+    "url": "git+https://github.com/willianjusten/js-tdd-course.git"
   },
   "keywords": [
     "js",
     "tdd",
     "library"
   ],
-  "author": "Jean Pierre <jean_pierre@outlook.com>",
+  "author": "Willian Justen <willianjustenqui@gmail.com> (https://willianjusten.com.br/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Jean-Pierre-97s/CursoJsTdd/issues"
+    "url": "https://github.com/willianjusten/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/Jean-Pierre-97s/CursoJsTdd#readme",
+  "homepage": "https://github.com/willianjusten/js-tdd-course#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.14.2",
-    "@typescript-eslint/parser": "^4.14.2",
-    "eslint": "^7.19.0",
-    "eslint-config-airbnb-base": "^14.2.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^3.5.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^11.3.2",
     "eslint-plugin-import": "^2.22.1",
-    "husky": "^4.3.8"
-  },
-  "dependencies": {}
+    "husky": "^5.0.9",
+    "mocha": "^8.2.1",
+    "nyc": "^10.3.2",
+    "rimraf": "^2.7.1"
+  }
 }
