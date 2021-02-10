@@ -1,5 +1,14 @@
-let a = 4;
-const b = 2;
-
-a = b + 2;
-console.log(a);
+module.exports = {
+  sum: function(num1, num2){
+    return num1 + num2 ;
+  },
+  sub: function(num1, num2){
+    return num1 - num2 ;
+  },
+  mult: function(num1, num2){
+    return num1 * num2 ;
+  },
+  div: function(num1, num2){
+    return (num2 == 0) ? 'Não é possivel divisão por zero.': num1 / num2 ;
+  },
+}
