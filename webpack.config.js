@@ -7,18 +7,18 @@ module.exports = {
   output: {
     filename: './build.js',
   },
-  module:{
+  module: {
     loaders: [
       {
-        test: \/.js$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query:{
+        query: {
           presets: [
-            ['es2015', {modules: false}]
-          ]
-        }
-      }
-    ]
-  }
+            ['es2015', { modules: false }],
+          ],
+        },
+      },
+    ],
+  },
 };
